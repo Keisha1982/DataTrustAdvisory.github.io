@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keisha Bryan | AI Accessibility Governance Lead</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+        :root {
+            --tech-navy: #040911;
+            --cyber-blue: #00d2ff;
+            --deep-azure: #0066cc;
+            --glass-white: rgba(255, 255, 255, 0.04);
+            --border-glow: rgba(0, 210, 255, 0.3);
+            --text-silver: #d1d5db;
+        }
+
+        * { box-sizing: border-box; transition: all 0.25s ease-in-out; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--tech-navy);
+            /* Subtle blue AI-mesh feel for the whole page */
+            background-image: radial-gradient(circle at 50% 0%, #003366 0%, #040911 50%);
+            background-attachment: fixed;
+            color: var(--text-silver);
+            margin: 0;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background Hero with Accessibility AI Theme */
+        .hero {
+            position: relative;
+            height: 85vh;
+            /* High-end AI Visualization Background */
+            background: linear-gradient(rgba(4, 9, 17, 0.7), rgba(4, 9, 17, 0.9)), 
+                        url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            border-bottom: 3px solid var(--deep-azure);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 7vw, 5rem);
+            margin: 0;
+            color: #ffffff;
+            letter-spacing: -3px;
+            font-weight: 800;
+            text-shadow: 0 0 30px rgba(0, 210, 255, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            color: var(--cyber-blue);
+            max-width: 900px;
+            margin: 1.5rem 0;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: -120px auto 0;
+            padding: 0 20px 100px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Enhanced Glass Cards */
+        .card {
+            background: rgba(10, 20, 35, 0.7);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(0, 210, 255, 0.15);
+            border-radius: 28px;
+            padding: 3.5rem;
+            margin-bottom: 3.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+        }
+
+        .card:hover {
+            border-color: var(--cyber-blue);
+            box-shadow: 0 0 40px rgba(0, 210, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2::after {
+            content: "";
+            height: 2px;
+            flex-grow: 1;
+            background: linear-gradient(to right, var(--deep-azure), transparent);
+            margin-left: 20px;
+        }
+
+        h3 { color: var(--cyber-blue); font-size: 1.6rem; margin-top: 0; }
+
+        /* AI Governance Layout */
+        .ai-governance-flex {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        /* Certifications Styling */
+        .cert-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+
+        .cert-pill {
+            background: rgba(0, 210, 255, 0.1);
+            border: 1px solid var(--border-glow);
+            color: #ffffff;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Data Metrics Grid */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .metric-card {
+            background: rgba(255,255,255,0.02);
+            padding: 2.5rem;
+            border-radius: 24px;
+            text-align: center;
+            border: 1px solid rgba(0, 210, 255, 0.1);
+        }
+
+        .percentage {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #ffffff;
+            background: linear-gradient(to bottom, #fff, var(--cyber-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        /* Tool Cloud */
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tool-tag {
+            background: rgba(255,255,255,0.05);
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            border: 1px solid rgba(0, 210, 255, 0.2);
+        }
+
+        .tool-tag:hover {
+            background: var(--deep-azure);
+            border-color: var(--cyber-blue);
+            color: white;
+        }
+
+        /* Footer Engagement Area */
+        .footer-cta {
+            background: radial-gradient(circle at top, #002d5c, #040911);
+            padding: 6rem 2rem;
+            text-align: center;
+            border-radius: 40px;
+            margin-top: 6rem;
+            border: 1px solid var(--border-glow);
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 3.5rem;
+        }
+
+        .cta-btn {
+            padding: 18px 40px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary { background: var(--deep-azure); color: white; }
+        .btn-outline { border: 2px solid var(--cyber-blue); color: #ffffff; }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 210, 255, 0.4);
+        }
+
+        @media (max-width: 900px) {
+            .ai-governance-flex { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 3rem; }
+            .container { margin-top: -60px; }
+            .card { padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <h1>Keisha Bryan</h1>
+    <p>Accessibility AI & Governance Lead</p>
+    <div class="cert-container">
+        <span class="cert-pill">WAS Certified</span>
+        <span class="cert-pill">CPACC Certified</span>
+        <span class="cert-pill">DHS G-Trusted Tester</span>
+        <span class="cert-pill">AWS Cloud Practitioner</span>
+        <span class="cert-pill">Azure AI Fundamentals</span>
+    </div>
+</section>
+
+<div class="container">
+
+    <section>
+        <div class="card">
+            <h2>The Future of Digital Inclusion</h2>
+            <p>I specialize in building sustainable accessibility frameworks for the world's most complex digital environments. With over 15 years of leadership, I ensure that emerging technologies like Generative AI and Cloud Computing are inclusive by design. My mission is to transform accessibility from a check-box requirement into a scalable, high-performing business capability.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>AI Accessibility Governance</h2>
+        <div class="card">
+            <div class="ai-governance-flex">
+                <div>
+                    <h3>Governing the AI Frontier</h3>
+                    <p>As organizations integrate Artificial Intelligence, I provide the essential oversight to ensure these tools are usable by everyone. I focus on the high-level governance of Large Language Models (LLMs) and conversational bots to prevent digital barriers before they are deployed.</p>
+                    <p><strong>Primary Focus:</strong> I assess and secure interfaces for IBM Watson, Microsoft Bot Framework, AWS Chatbot, and OpenAI deployments. I ensure that real-time AI interactions are navigable via screen readers and that dynamic updates are announced clearly.</p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800" alt="Abstract AI Neural Network" style="width:100%; border-radius:24px; border:1px solid rgba(0,210,255,0.3); box-shadow: 0 0 20px rgba(0,210,255,0.2);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Enterprise Maturity & Performance</h2>
+        <div class="dashboard-grid">
+            <div class="metric-card">
+                <div class="percentage">85%</div>
+                <h3>Compliance Health</h3>
+                <p>Maintaining a strong baseline across large-scale portfolios in Healthcare, Finance, and Public sectors.</p>
+            </div>
+            <div class="metric-card">
+                <div class="percentage">95%</div>
+                <h3>Optimization Goal</h3>
+                <p>Our target for mature ecosystems utilizing AI-driven automated testing and continuous governance monitoring.</p>
+            </div>
+            <div class="metric-card">
+                <div class="percentage">100%</div>
+                <h3>Standard Alignment</h3>
+                <p>Full adherence to Section 508, WCAG 2.2, and international accessibility regulations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Strategic Partnerships</h2>
+        <div class="card" style="text-align: center;">
+            <p style="margin-bottom: 2rem; font-weight: 600; color: var(--cyber-blue); letter-spacing: 1px;">DELIVERING ACCESSIBILITY EXCELLENCE FOR:</p>
+            <div class="tools-list" style="justify-content: center;">
+                <span class="tool-tag">Google</span>
+                <span class="tool-tag">Microsoft</span>
+                <span class="tool-tag">IBM</span>
+                <span class="tool-tag">NASA</span>
+                <span class="tool-tag">CVS Health</span>
+                <span class="tool-tag">Deloitte</span>
+                <span class="tool-tag">FedEx</span>
+                <span class="tool-tag">Oracle</span>
+                <span class="tool-tag">Johns Hopkins</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-cta">
+        <h2 style="justify-content: center; border: none; margin-bottom: 1rem;">Let's Lead with Inclusion</h2>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.8;">Available for AI Governance assessments, enterprise strategy consultations, and executive accessibility training.</p>
+        <div class="btn-group">
+            <a href="mailto:Kerryanne8335@gmail.com" class="cta-btn btn-primary">
+                <i class="fas fa-envelope"></i> Email Consultation
+            </a>
+            <a href="https://www.linkedin.com/in/keisha-b-970310169/" target="_blank" class="btn-outline cta-btn">
+                <i class="fab fa-linkedin"></i> LinkedIn Profile
+            </a>
+            <a href="tel:3013778381" class="btn-outline cta-btn">
+                <i class="fas fa-phone"></i> 301.377.8381
+            </a>
+        </div>
+        <p style="margin-top: 4rem; opacity: 0.3; font-size: 0.85rem;">Keisha Bryan | Maryland Based | Serving Global Enterprise Markets</p>
+    </footer>
+</div>
+
+</body>
+</html>
